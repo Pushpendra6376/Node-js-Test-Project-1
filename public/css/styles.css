@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: #f4f5f7;
+}
+
+/* Sidebar */
+#sidebar {
+  width: 250px;
+  background: #1e1f22;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar h3 { margin-bottom: 10px; }
+
+#tablesList {
+  list-style: none;
+  flex: 1;
+  overflow-y: auto;
+}
+
+#tablesList li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#tablesList li:hover {
+  background: #2b2d31;
+}
+
+#sidebar button {
+  background: #0078ff;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#sidebar button:hover { background: #0060d0; }
+
+/* Main View */
+#mainView {
+  flex: 1;
+  padding: 25px;
+}
+
+#tableTitle {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#insertRecordBtn {
+  float: right;
+  background: #009e4d;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+#insertRecordBtn:hover { background: #007a3b; }
+
+/* Tables */
+#recordsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#recordsTable th, #recordsTable td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#recordsTable th {
+  background: #d6d6d6;
+}
+
+.deleteBtn {
+  background: red;
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.deleteBtn:hover { background: darkred; }
+
+/* Modal Common */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background: white;
+  padding: 25px;
+  width: 450px;
+  border-radius: 8px;
+  position: relative;
+  animation: popup 0.25s ease-in-out;
+}
+
+@keyframes popup {
+  from { transform: scale(0.8); }
+  to { transform: scale(1); }
+}
+
+.close {
+  font-size: 24px;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
+/* Form */
+.modalContent input,
+.modalContent select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modalContent button {
+  background: #0078ff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.modalContent button:hover { background: #0060d0; }
