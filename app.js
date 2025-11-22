@@ -29,7 +29,7 @@ app.listen(PORT, async () => {
 
   try {
     await sequelize.authenticate();
-    console.log("Database Connected");
+    console.log("Database is created");
 
     await sequelize.sync();
     console.log("Database Synced / Models Updated");
