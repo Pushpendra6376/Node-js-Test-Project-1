@@ -112,8 +112,6 @@ exports.insertRecord = async (req, res) => {
   }
 };
 
-
-
 /* Delete */
 exports.deleteRecord = async (req, res) => {
   const { table, id } = req.params;
