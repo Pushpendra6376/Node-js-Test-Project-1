@@ -85,7 +85,7 @@ exports.insertRecord = async (req, res) => {
     console.log("Received payload:", req.body);
     console.log("Received table param:", req.params.table);
 
-    const tableName = req.params.table;   // 👈 correct
+    const tableName = req.params.table;  
 
     const payload = { ...req.body }; // clone incoming body
 

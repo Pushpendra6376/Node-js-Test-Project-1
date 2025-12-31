@@ -49,7 +49,7 @@ async function deleteRecord(id) {
   loadTableData(currentTable);
 }
 
-/* Modal functionality */
+// Modal functionality 
 const createModal = document.getElementById("createModal");
 document.getElementById("openCreateModal").onclick = () => createModal.style.display = "flex";
 document.getElementById("closeCreateModal").onclick = () => createModal.style.display = "none";
